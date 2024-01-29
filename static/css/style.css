@@ -1,0 +1,268 @@
+body {
+    /* Rever Fonte*/
+    font-family: Nunito, sans-serif;
+    color: #1c1c1c;
+}
+
+h1, h2, h3 {
+    font-family: Asap, sans-serif;
+    color: #000000;
+}
+
+.botao {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #191970;
+    font-size: .9em;
+    border-radius: 3px;
+}
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+}
+
+/* NAVEGAÇÃO */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #191970;
+}
+
+nav > a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 32px;
+    font-family: Yellowtail, serif;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    /* Tirar o espaçamento */
+    padding: 0;
+    /* 1ºResponsivo - Vai ocupar 100% largura */
+    width: 100%;
+}
+
+nav ul li {
+    text-align: center;
+    width: 100%;
+}
+
+nav ul li a {
+    /* precisamos transformar os links em blocos: */
+    display: inline-block;
+    padding: 10px 0;
+    width: 100%;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* CABEÇALHO */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/static/img/marcia_moreira.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+
+
+}
+
+header h1 {
+    /* color: #ffffff; */
+    color: #000000;
+    background-color: #f1f1f1;
+    opacity: 0.6;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+header p {
+    margin-bottom: 2em;
+    color: #000000;
+    background-color: #f1f1f1;
+    opacity: 0.6;
+    border-radius: 10px;
+    padding: 10px;
+    /* background-color: rgba(0, 0, 255, 0.5); */
+}
+/* Sobre Transparência */
+/* https://scriptdev.com.br/como-criar-um-fundo-transparente-em-css/#:~:text=Para%20criar%20um%20fundo%20transparente,background%2Dcolor%20com%20valor%20rgba%20.&text=Nesse%20exemplo%2C%20o%20elemento%20%3Cdiv,azul%20com%2050%25%20de%20transpar%C3%AAncia. */
+
+/* 
+Parei no minuto 25:49 assunto #sobre
+*/
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px 20px 20px;
+}
+
+#sobre h2 {
+    color: #ffffff;
+}
+
+#sobre p {
+    /* margem dinâmica: */
+    margin-bottom: 2.5em;
+    /* largura máxima tela imensa: */
+    max-width: 1000px;
+
+}
+
+#sobre .botão {
+    background-color: #f1f1f1;
+    color: #1c1c1c;
+}
+
+#serviços {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+#serviços div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* FOTOS*/
+
+#fotos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#fotos h2 {
+    margin-bottom: 20px;
+}
+
+#fotos img {
+    width: 100%;
+}
+
+/* CONTATOS */
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#contato div a {
+    text-decoration: none;
+    color: #191970;
+}
+
+#contato {
+    color: #000000;
+}
+
+/* RODAPE */
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #191970;
+    color: #ffffff;
+}
+
+footer a {
+    text-decoration: none;
+    color: #00ffff;
+}
+
+/* MEDIA QUERYS */
+
+/* Ajustes para telas de computador: */
+@media screen and (min-width: 768px){
+    /* nav */
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    nav ul {
+        flex-direction: row;
+        width: 70%;
+    }
+    /* cabeçalho */
+    header {
+        height: 600px;
+        height: 60vh;
+        justify-content: center;
+    }
+    #sobre {
+        height: 250px;
+        height: 30vh;
+        justify-content: center;
+        min-height: 250px
+    }
+    #serviços {
+        flex-direction: row;
+        /* quebra de linha: */
+        flex-wrap: wrap;
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    #serviços h2 {
+        text-align: center;
+        width: 100%;
+    }
+    #serviços div {
+        flex-grow: 1;
+        flex-basis: 150px;
+        padding: 0 10px;
+    }
+    /* fotos */
+    #fotos {
+        /* fotos lado a lado */
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #fotos h2 {
+        width: 100%;
+        text-align: center;
+    }
+    #fotos img {
+        width: 33.3333333%;
+    }
+    /* contato */
+    #contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    #contato h2, #contato p {
+        width: 100%;
+    }
+}
